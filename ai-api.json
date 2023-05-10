@@ -1,0 +1,107 @@
+{
+  "uuid": "debc13e8-7086-4f18-bbb6-6dd4efc79494",
+  "lastMigration": 27,
+  "name": "Ai api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "2d14b982-6797-4208-a42d-f3db4319173a",
+      "name": "New folder",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "fd1dbf2a-43d7-46b7-8318-502717eed77e"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "fd1dbf2a-43d7-46b7-8318-502717eed77e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "input-automation",
+      "responses": [
+        {
+          "uuid": "86050d28-9dc1-4b7c-99e2-d0c06ec07d33",
+          "body": "{\n  \"ktp_data\": {\n    \"nik\" : \"{{faker 'random.numeric' 20}}\",\n    \"name\" : \"{{faker 'name.fullName'}}\",\n    \"place_of_birth\": \"{{faker 'address.city'}}\",\n    \"date_of_birth\": {{faker 'date.birthdate'}},\n    \"gender\": \"{{faker 'name.gender'}}\",\n    \"address\": \"{{faker 'address.streetAddress'}}\",\n    \"rt\": {{faker 'datatype.number'}},\n    \"rw\" : {{faker 'datatype.number'}},\n    \"subdistrict\": \"{{faker 'address.state'}}\",\n    \"district\": \"{{faker 'address.city'}}\",\n    \"religion\": \"{{oneOf (array 'islam' 'kristen' 'katholik' 'hindu' 'budha')}}\",\n    \"marital_status\": \"{{oneOf (array 'kawin' 'belum kawin')}}\",\n    \"occupation\": \"{{faker 'name.jobType'}}\",\n    \"nationality\": \"{{faker 'address.countryCode'}}\"\n  },\n  \"siup_data\": {\n    \n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "cc26c7de-6099-48a7-a2ac-9016fd69e9f0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "2d14b982-6797-4208-a42d-f3db4319173a"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
