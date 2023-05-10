@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx mockoon-cli start --data ./ai-api.json",
+    "start": "npx mockoon-cli start --data ./ai-api.json"
   },
   "author": "",
   "license": "ISC",
